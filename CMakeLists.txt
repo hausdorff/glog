@@ -533,7 +533,7 @@ if (BUILD_TESTING)
 
   target_link_libraries (utilities_unittest PRIVATE glog)
 
-  if (HAVE_STACKTRACE AND HAVE_SYMBOLIZE)
+  if (HAVE_STACKTRACE AND HAVE_SYMBOLIZE AND NOT WIN32)
     add_executable (signalhandler_unittest
       src/signalhandler_unittest.cc
     )
