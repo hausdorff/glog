@@ -458,6 +458,7 @@ endif (HAVE_EXECINFO_H)
 if (WIN32)
   set (HAVE_STACKTRACE 1)
   set (HAVE_SYMBOLIZE 1)
+  message(FATAL_ERROR ${HAVE_SYMBOLIZE})
   target_link_libraries (glog PUBLIC Dbghelp.lib)
 endif (WIN32)
 
